@@ -15,7 +15,9 @@ RUN apt-get install -y node npm
 RUN npm install -y -g grunt-cli grunt bower
 
 # Install LAMP stack
-RUN apt-get -y install apache2 php5 mysql-server
+RUN apt-get -y install apache2
+RUN apt-get -y install mysql-server libapache2-mod-auth-mysql php5-mysql
+RUN apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
 
 # Install Ruby stack
 RUN apt-get install -y rails rbenv
@@ -30,4 +32,3 @@ RUN pip install awscli aws-shell
 
 # Install GIT, R and rest of software
 RUN apt-get install -y r-base qgis sqlite git nano wget htop
-
