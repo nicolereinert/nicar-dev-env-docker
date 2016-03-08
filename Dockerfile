@@ -25,7 +25,9 @@ RUN apt-get install -y postgresql postgis
 
 # Install Python and Python-based Apps.
 RUN apt-get install -y python python-dev python-pip
-RUN pip install csvkit Django pandas virtualenv virtualenvwrapper awscli aws-shell
+RUN pip install csvkit Django pandas virtualenv virtualenvwrapper
+RUN pip install awscli aws-shell
 
 # Install GIT, R and rest of software
 RUN apt-get install -y r-base qgis sqlite git nano wget htop
+
